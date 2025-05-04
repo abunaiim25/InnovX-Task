@@ -8,21 +8,26 @@ use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
+    //---------- REDIRECT HOME/ADMIN ---------
     public function redirect()
     {
-        if(Auth::user()->role === 'admin') {
+        if (Auth::user()->role === 'admin') {
             return redirect()->route('admin.dashboard');
-        } 
+        }
         return redirect()->route('normal.home');
     }
 
 
-    public function about() {
+    //---------- ABOUT ---------
+    public function about()
+    {
         return view('normal.about');
     }
 
 
-    public function contact() {
+    //---------- CONTACT ---------
+    public function contact()
+    {
         return view('normal.contact');
     }
 }
