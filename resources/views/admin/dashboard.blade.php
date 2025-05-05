@@ -37,7 +37,7 @@
                             <span class="badge bg-secondary text-dark">Normal User</span>
                         @endif
                     </td>
-                    <td>{{ optional($user->created_at)->format('d M Y') }}</td>
+                    <td class="text-dark">{{ optional($user->created_at)->format('d M Y') }}</td>
                 </tr>
             @empty
                 <tr>
